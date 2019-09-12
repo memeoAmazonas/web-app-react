@@ -7,7 +7,34 @@
   "login": "Iniciar Sesion",
   "email": "Correo Electronico",
   "errors": {
-  "loginFail": "Error de authenticacion usuario o contraseña invalido"
-}
+    "loginFail": "Error de authenticacion usuario o contraseña invalido"
+  },
+  "headerBookingDetail": [
+    {
+      "dataField": "bookingId",
+      "text": "bookingId",
+      "sort": true,
+      "filter": true
+    },
+    {
+      "dataField": "Cliente",
+      "text": "name"
+    },
+    {
+    "dataField": "bookingTime",
+    "text": "Fecha de Creación"
+    },
+    {
+      "dataField": "streetAddress",
+      "text": "Dirección"
+    },
+    {
+      "dataField": "bookingPrice",
+      "text": "Precio",
+      "sort": true,
+      "filter": true
+    }
+
+  ]
 }
 

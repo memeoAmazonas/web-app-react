@@ -17,13 +17,24 @@ import '../sass/views/login.scss';
 class Login extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      url: '',
+    };
     this.send = this.send.bind(this);
+    this.redirect = this.redirect.bind(this);
   }
   send() {
-    this.props.login(this.props.email, this.props.password, () => alert('funciono'));
+    this.props.login(this.props.email, this.props.password, () => (this.redirect('/home')));
+  }
+  redirect(url) {
+    this.setState({ url });
   }
   render() {
+    if (this.state.url !== '') {
+      return (
+        <Redirect to={this.state.url} />
+      );
+    }
     const content = (
       <div className="login">
         <InputEntry width={50} placeholder={strings.email} typeReducer={EMAIL} />
