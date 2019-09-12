@@ -9,6 +9,7 @@ import InputEntry from '../components/inputEntry';
 import MainContainer from '../components/mainContainer';
 
 import login from '../actions/user';
+import booking from '../actions/booking';
 
 import { EMAIL, PASSWORD } from '../actions/types';
 
@@ -27,6 +28,7 @@ class Login extends React.PureComponent {
     this.props.login(this.props.email, this.props.password, () => (this.redirect('/home')));
   }
   redirect(url) {
+    this.props.booking(this.props.token);
     this.setState({ url });
   }
   render() {
@@ -50,19 +52,24 @@ class Login extends React.PureComponent {
 Login.defaultProps = {
   email: '',
   login: null,
+  booking: null,
   password: '',
+  token: '',
 };
 Login.propTypes = {
   email: PropTypes.string,
   login: PropTypes.func,
+  booking: PropTypes.func,
   password: PropTypes.string,
+  token: PropTypes.string,
 };
 
 const mapStateToProps = state => (
   {
     email: state.user.email,
     password: state.user.password,
+    token: state.user.token,
   }
 );
-const mapDispatchToProps = { login };
+const mapDispatchToProps = { login, booking };
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

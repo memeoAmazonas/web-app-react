@@ -13,11 +13,11 @@ const login = (email, password, callback) => (dispatch) => {
     .set({ password })
     .set({ app: appTuten })
     .then((response) => {
-      callback();
       dispatch({
         type: LOGIN_SUCCESS,
         payload: response.body.sessionTokenBck,
       });
+      callback();
     })
     .catch(() => {
       dispatch({
