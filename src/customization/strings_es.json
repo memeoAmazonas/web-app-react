@@ -5,6 +5,9 @@
   "title": "WebApp-React",
   "password": "Contraseña",
   "login": "Iniciar Sesion",
-  "email": "Correo Electronico"
+  "email": "Correo Electronico",
+  "errors": {
+  "loginFail": "Error de authenticacion usuario o contraseña invalido"
+}
 }
 
