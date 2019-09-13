@@ -1,5 +1,8 @@
 # Tuten WebApp by Jose Ortiz
-
+ 
+ date 09/13/2019
+ 
+this app are development on ReactJS
 
 ## Project Setup
 
@@ -46,6 +49,7 @@ To build the app for production purposes, run the following command:
 ```bash
 $ npm run deploy
 ```
-
+## Observations
+``this appplication not contains all validate cases, for example, messages error, input pattern validation, Server Side Rendering ``
 
 
