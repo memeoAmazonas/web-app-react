@@ -57,7 +57,8 @@ const booking = token => (dispatch) => {
     type: BOOKING,
   });
   request
-    .get(urlTuten.concat(`${email}/bookings?current=${true}`))
+    .get(urlTuten.concat(`${email}/bookings`))
+    .query({ current: true })
     .set({ Accept: 'application/json' })
     .set({ token })
     .set({ app: appTuten })

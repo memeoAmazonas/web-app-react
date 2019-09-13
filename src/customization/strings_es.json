@@ -6,6 +6,11 @@
   "password": "Contraseña",
   "login": "Iniciar Sesion",
   "email": "Correo Electronico",
+  "hour": "Hora",
+  "send": "Enviar",
+  "logout" : "Cerrar sesion",
+  "timezone": "Zona horaria",
+  "getUtc": "Hora formato UTC",
   "errors": {
     "loginFail": "Error de authenticacion usuario o contraseña invalido"
   },

@@ -3,6 +3,7 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import Login from '../login';
 import Home from '../home';
+import Utc from '../utc';
 
 class Body extends React.PureComponent {
   render() {
@@ -19,6 +20,10 @@ class Body extends React.PureComponent {
               exact
               path="/home"
               render={() => (<Home />)}
+            />            <Route
+              exact
+              path="/utc"
+              render={() => (<Utc />)}
             />
           </Switch>
         </Router>

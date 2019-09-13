@@ -1,4 +1,4 @@
-import { BOOKING, BOOKING_FAIL, BOOKING_SUCCESS, RESET } from '../actions/types';
+import { BOOKING, BOOKING_FAIL, BOOKING_SUCCESS } from '../actions/types';
 
 const INITIAL_STATE = {
   booking: {},
@@ -8,8 +8,6 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case RESET:
-      return Object.assign({}, state);
     case BOOKING:
       return { ...state, error: '', loading: true };
     case BOOKING_FAIL:

@@ -20,6 +20,20 @@ body,
   margin: 0;
 }
 
+.header{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: flex-end;
+  padding-right: 2%;
+  a{
+    color: $secondColor;
+    font-size: 150%;
+    margin-right: 2%;
+
+  }
+}
+
 .page {
   min-height: 100%;
   padding: 0;

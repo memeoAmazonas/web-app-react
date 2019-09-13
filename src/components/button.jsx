@@ -12,13 +12,13 @@ class Button extends React.PureComponent {
 }
 
 Button.defaultProps = {
-  label: '',
   callToAction: null,
+  label: '',
 };
 
 Button.propTypes = {
-  label: PropTypes.string,
   callToAction: PropTypes.func,
+  label: PropTypes.string,
 };
 
 export default Button;

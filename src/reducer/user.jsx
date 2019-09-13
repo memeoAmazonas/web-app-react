@@ -1,7 +1,6 @@
 import {
   LOGIN,
   EMAIL,
-  RESET,
   PASSWORD,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
@@ -17,8 +16,6 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case RESET:
-      return Object.assign({}, state);
     case EMAIL:
       return { ...state, email: action.payload };
     case PASSWORD:

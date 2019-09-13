@@ -1,0 +1,19 @@
+@import "../colors";
+
+.utc-card {
+
+  background: $firstColor;
+  border-radius: 0 10px 0 0;
+  color: $secondColor;
+  margin-top: 5%;
+  text-shadow: 1px 1.7px 103px rgba(31, 26, 16, 0.75);
+  text-transform: uppercase;
+  width: 50%;
+
+  .label-card {
+    align-items: center;
+    display: flex;
+    margin-left: 2%;
+
+  }
+}

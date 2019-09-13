@@ -61,10 +61,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitdharma-memeoAmazonas@bitbucket.org/bitdharma/dharma-site.git"
+    "url": "https://github.com/memeoAmazonas/web-app-react"
   },
   "keywords": [
-    "wallet"
+    "tuten"
   ],
   "author": "Jose Ortiz",
   "license": "ISC"

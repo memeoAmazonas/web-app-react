@@ -19,17 +19,17 @@ class InputEntry extends React.PureComponent {
 InputEntry.defaultProps = {
   placeholder: '',
   setInputField: null,
+  type: '',
   typeReducer: '',
   width: 20,
-  type: '',
 };
 
 InputEntry.propTypes = {
   placeholder: PropTypes.string,
   setInputField: PropTypes.func,
+  type: PropTypes.string,
   typeReducer: PropTypes.string,
   width: PropTypes.number,
-  type: PropTypes.string,
 };
 const mapStateToProps = () => ({});
 const mapDispatchToProps = { setInputField };

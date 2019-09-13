@@ -1,7 +1,8 @@
 import request from 'superagent';
-import { LOGIN, LOGIN_FAIL, LOGIN_SUCCESS } from './types';
-import { appTuten, urlTuten } from '../utils/constant';
+
 import strings from '../components/strings';
+import { appTuten, urlTuten } from '../utils/constant';
+import { LOGIN, LOGIN_FAIL, LOGIN_SUCCESS } from './types';
 
 const login = (email, password, callback) => (dispatch) => {
   dispatch({
