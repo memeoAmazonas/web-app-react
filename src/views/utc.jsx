@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import InputEntry from '../components/inputEntry';
+import getUtc from '../actions/utc';
+import Button from '../components/button';
 import strings from '../components/strings';
+import UtcCard from '../components/utcCard';
+import InputEntry from '../components/inputEntry';
 import { HOUR, TIMEZONE } from '../actions/types';
 import MainContainer from '../components/mainContainer';
-import Button from '../components/button';
-import getUtc from '../actions/utc';
-import UtcCard from '../components/utcCard';
 
 class Utc extends React.PureComponent {
   constructor(props) {
