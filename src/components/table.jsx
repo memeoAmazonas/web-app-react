@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
+import filterFactory, { numberFilter } from 'react-bootstrap-table2-filter';
 import '../sass/components/table.scss';
-import strings from './strings';
 
 class Table extends React.PureComponent {
   render() {
@@ -12,7 +11,7 @@ class Table extends React.PureComponent {
       {
         dataField: 'bookingId',
         text: 'bookingId ',
-        filter: textFilter(),
+        filter: numberFilter(),
       },
       {
         dataField: 'name',
@@ -29,7 +28,7 @@ class Table extends React.PureComponent {
       {
         dataField: 'bookingPrice',
         text: 'Precio  ',
-        filter: textFilter(),
+        filter: numberFilter(),
       },
     ];
     const options = {

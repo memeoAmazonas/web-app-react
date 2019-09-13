@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import Button from '../components/button';
 import strings from '../components/strings';
@@ -39,8 +39,8 @@ class Login extends React.PureComponent {
     }
     const content = (
       <div className="login">
-        <InputEntry width={50} placeholder={strings.email} typeReducer={EMAIL} />
-        <InputEntry width={50} placeholder={strings.password} typeReducer={PASSWORD} />
+        <InputEntry width={50} placeholder={strings.email} typeReducer={EMAIL} type="email" />
+        <InputEntry width={50} placeholder={strings.password} typeReducer={PASSWORD} type="password" />
         <Button label={strings.ingress} callToAction={this.send} />
       </div>);
     return (

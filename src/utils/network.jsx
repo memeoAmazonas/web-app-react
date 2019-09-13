@@ -1,6 +1,6 @@
 import superagent from 'superagent';
 import superAgentAbsolute from 'superagent-absolute';
-import { urlTuten } from './config';
+import { urlTuten } from './constant';
 
 let urlBase = urlTuten;
 if (process.env.NODE_ENV === 'development') {

@@ -10,7 +10,7 @@ class InputEntry extends React.PureComponent {
   render() {
     return (
       <div className="input-entry">
-        <input placeholder={this.props.placeholder} style={{ width: `${this.props.width}%` }} onChange={e => this.props.setInputField(this.props.typeReducer, e.target.value)} />
+        <input placeholder={this.props.placeholder} style={{ width: `${this.props.width}%` }} onChange={e => this.props.setInputField(this.props.typeReducer, e.target.value)} type={this.props.type} />
       </div>
     );
   }
@@ -21,6 +21,7 @@ InputEntry.defaultProps = {
   setInputField: null,
   typeReducer: '',
   width: 20,
+  type: '',
 };
 
 InputEntry.propTypes = {
@@ -28,6 +29,7 @@ InputEntry.propTypes = {
   setInputField: PropTypes.func,
   typeReducer: PropTypes.string,
   width: PropTypes.number,
+  type: PropTypes.string,
 };
 const mapStateToProps = () => ({});
 const mapDispatchToProps = { setInputField };

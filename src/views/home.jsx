@@ -11,35 +11,35 @@ import '../sass/views/home.scss';
 import booking from '../actions/booking';
 
 class Home extends React.PureComponent {
+  componentDidMount() {
+    this.props.booking(this.props.token);
+  }
+
   render() {
-    const data = [{
-      bookingId: 1,
-      name: 'Jose',
-      bookingTime: '1',
-      streetAddress: '1',
-      bookingPrice: '1',
-    }];
+    const data = this.props.bookingBody !== [] ? this.props.bookingBody : [];
     return (
       <MainContainer content={<Table data={data} />} label={strings.home} />
     );
   }
 }
 Home.defaultProps = {
-  email: '',
   token: '',
   booking: null,
+  bookingBody: [],
 };
+
 Home.propTypes = {
-  email: PropTypes.string,
   token: PropTypes.string,
   booking: PropTypes.func,
+  bookingBody: PropTypes.array,
 };
 
 const mapStateToProps = state => (
   {
-    email: state.user.email,
     token: state.user.token,
+    bookingBody: state.booking.booking,
   }
 );
+
 const mapDispatchToProps = { booking };
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
